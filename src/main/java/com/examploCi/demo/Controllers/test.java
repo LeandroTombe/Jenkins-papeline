@@ -24,4 +24,9 @@ public class test {
         log.info("Access to controller hello world");
         return ResponseEntity.ok("Hello World");
     }
+
+    @GetMapping("/test2")
+    public ResponseEntity<String> integrationTest(){
+        return  ResponseEntity.ok("New hello world");
+    }
 }
