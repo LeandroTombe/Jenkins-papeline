@@ -21,7 +21,7 @@ pipeline {
             steps{
                 script{
                     withCredentials([string(credentialsId: 'prueba', variable: 'ejemplo')]) {
-                        bat 'docker login -u aloric -p 1s573g73rg'
+                        bat 'docker login -u aloric -p ${ejemplo}'
                         bat "docker tag testintegration/devops-integrations aloric/devops"
                         bat 'docker push aloric/devops'
                     }
